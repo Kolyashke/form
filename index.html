@@ -22,6 +22,9 @@
 					<label for="slider">Оцени от 0 до 5, как ведет занятие Николай?</label>
 					<input type="range" class="custom-range" min="0" max="5" id="slider">
 				</div>
+				<div class="text-center">
+					<h1 id="value"> Средне </h1>
+				</div>
 
 					<button type="submit" class="btn btn-primary"> Зарегистрировать </button>
 		</form>
@@ -36,7 +39,32 @@
     <script type="text/javascript">
     	$('#slider').on('change', function(){
     		let msg=$('#slider').val();
-    		alert(msg);
+    		if (msg==0)
+    		{
+    			$('#value').html("Кошмар");
+    		}
+    		else if (msg==1)
+    		{
+    			$('#value').html("Ужасно");
+    		}
+    		  else if (msg==2)
+    		{
+    			$('#value').html("Плохо");
+    		}
+    		  else if (msg==3)
+    		{
+    			$('#value').html("Средне");
+    		}
+    		  else if (msg==4)
+    		{
+    			$('#value').html("Хорошо");
+    		}
+    		  else if (msg==5)
+    		{
+    			$('#value').html("СУПЕР!!!!!!!!!");
+    		}
+    		//$('#value').html(msg);
+    		//alert(msg);
     		console.log(msg);
     	})
     </script>
